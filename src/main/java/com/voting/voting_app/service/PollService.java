@@ -40,7 +40,7 @@ public class PollService {
         if(optionIndex<0 || optionIndex>=options.size()){
             throw new IllegalArgumentException("Invalid option index");
         }
-         OptionVote option=options.get(optionIndex-1);
+         OptionVote option=options.get(optionIndex);
         option.setVoteCount(option.getVoteCount()+1);
         pollRepository.save(poll);
 
